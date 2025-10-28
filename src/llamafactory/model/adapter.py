@@ -294,8 +294,8 @@ def init_adapter(
     Note that the trainable parameters must be cast to float32.
     """
     if is_trainable and getattr(model, "quantization_method", None) is not None:
-        if finetuning_args.finetuning_type not in ["lora", "oft"]:
-            raise ValueError("Quantized models can only be used for the LoRA or OFT tuning.")
+        # if finetuning_args.finetuning_type not in ["lora", "oft"]:
+        #     raise ValueError("Quantized models can only be used for the LoRA or OFT tuning.")
 
         if finetuning_args.pissa_init:
             raise ValueError("Cannot initialize PiSSA adapter on quantized models.")

@@ -37,6 +37,7 @@ class DatasetAttr:
     split: str = "train"
     folder: Optional[str] = None
     num_samples: Optional[int] = None
+    data_files: Optional[Union[str, list[str]]] = None
     # common columns
     system: Optional[str] = None
     tools: Optional[str] = None
@@ -76,6 +77,7 @@ class DatasetAttr:
         self.set_attr("split", attr, default="train")
         self.set_attr("folder", attr)
         self.set_attr("num_samples", attr)
+        self.set_attr("data_files", attr)
 
         if "columns" in attr:
             column_names = ["prompt", "query", "response", "history", "messages", "system", "tools"]

@@ -61,11 +61,13 @@ def _load_single_dataset(
         data_path = dataset_attr.dataset_name
         data_name = dataset_attr.subset
         data_dir = dataset_attr.folder
+        data_files = dataset_attr.data_files
 
     elif dataset_attr.load_from == "script":
         data_path = os.path.join(data_args.dataset_dir, dataset_attr.dataset_name)
         data_name = dataset_attr.subset
         data_dir = dataset_attr.folder
+        data_files = dataset_attr.data_files
 
     elif dataset_attr.load_from == "cloud_file":
         data_path = dataset_attr.dataset_name
