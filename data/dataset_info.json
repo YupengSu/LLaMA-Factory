@@ -733,7 +733,10 @@
   },
   "slimpajama_train": {
     "hf_hub_url": "json",
-    "data_files": "${DATA_DIR}/Datasets/SlimPajama-627B/train/**/*.jsonl.zst",
+    "data_files": [
+      "${DATA_DIR}/datasets/SlimPajama-627B/train/chunk1/**/*.jsonl.zst",
+      "${DATA_DIR}/datasets/SlimPajama-627B/train/chunk2/**/*.jsonl.zst"
+    ],
     "split": "train",
     "columns": {
       "prompt": "text"
@@ -741,7 +744,7 @@
   },
   "slimpajama_eval": {
     "hf_hub_url": "json",
-    "data_files": "${DATA_DIR}/Datasets/SlimPajama-627B/validation/**/*.jsonl.zst",
+    "data_files": "${DATA_DIR}/datasets/SlimPajama-627B/validation/chunk1/*.jsonl.zst",
     "split": "train",
     "columns": {
       "prompt": "text"
